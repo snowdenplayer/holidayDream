@@ -1,0 +1,1127 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* make sure to set some focus styles for accessibility */
+:focus {
+  outline: 0;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration,
+input[type=search]::-webkit-search-results-button,
+input[type=search]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+input[type=search] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+}
+
+/**
+ * Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  max-width: 100%;
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address styling not present in IE 7/8/9, Firefox 3, and Safari 4.
+ * Known issue: no IE 6 support.
+ */
+[hidden] {
+  display: none;
+}
+
+/**
+ * 1. Correct text resizing oddly in IE 6/7 when body `font-size` is set using
+ *    `em` units.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-size: 100%;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+a:focus {
+  outline: thin dotted;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/**
+ * 1. Remove border when inside `a` element in IE 6/7/8/9 and Firefox 3.
+ * 2. Improve image quality when scaled in IE 7.
+ */
+img {
+  border: 0;
+  /* 1 */
+  -ms-interpolation-mode: bicubic;
+  /* 2 */
+}
+
+/**
+ * Address margin not present in IE 6/7/8/9, Safari 5, and Opera 11.
+ */
+figure {
+  margin: 0;
+}
+
+/**
+ * Correct margin displayed oddly in IE 6/7.
+ */
+form {
+  margin: 0;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct color not being inherited in IE 6/7/8/9.
+ * 2. Correct text not wrapping in Firefox 3.
+ * 3. Correct alignment displayed oddly in IE 6/7.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  white-space: normal;
+  /* 2 */
+  *margin-left: -7px;
+  /* 3 */
+}
+
+/**
+ * 1. Correct font size not being inherited in all browsers.
+ * 2. Address margins set differently in IE 6/7, Firefox 3+, Safari 5,
+ *    and Chrome.
+ * 3. Improve appearance and consistency in all browsers.
+ */
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  vertical-align: baseline;
+  /* 3 */
+  *vertical-align: middle;
+  /* 3 */
+}
+
+/**
+ * Address Firefox 3+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+button,
+input {
+  line-height: normal;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 6+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
+ *    Known issue: inner spacing remains in IE 6.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+  *overflow: visible;
+  /* 4 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * 1. Address box sizing set to content-box in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ * 3. Remove excess padding in IE 7.
+ *    Known issue: excess padding remains in IE 6.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+  *height: 13px;
+  /* 3 */
+  *width: 13px;
+  /* 3 */
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Remove inner padding and border in Firefox 3+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * 1. Remove default vertical scrollbar in IE 6/7/8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+}
+
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html,
+button,
+input,
+select,
+textarea {
+  color: #222;
+}
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+img {
+  vertical-align: middle;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.chromeframe {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(../fonts/Montserrat-Bold.ttf);
+}
+
+@font-face {
+  font-family: 'MontserratThin';
+  src: url(../fonts/Montserrat-Light.ttf);
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(../fonts/Roboto-Thin.ttf);
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-image: url(../img/Bitmap.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.header__container {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-top: 41px;
+  height: 700px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.header__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-right: 41px;
+}
+
+.header__logo .logo__link {
+  text-decoration: none;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  color: #FFFFFF;
+}
+
+.header__buttons-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__log-in {
+  margin-right: 20px;
+}
+
+.header__log-in .log-in__link {
+  text-decoration: none;
+  font-family: MontserratThin;
+  font-size: 14px;
+  line-height: 17px;
+  color: #FFFFFF;
+}
+
+.header__sign-up .sign-up__link {
+  width: 90px;
+  height: 36px;
+  border: 2px solid #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 40px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  font-family: MontserratThin;
+  font-size: 14px;
+  line-height: 17px;
+  color: #FFFFFF;
+}
+
+.header__column {
+  margin-top: 147px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__interview {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 52px;
+  line-height: 63px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.header__text {
+  margin-top: 28px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 24px;
+  text-align: center;
+  color: #F7F3F2;
+}
+
+.header__button-partner {
+  margin-top: 35px;
+}
+
+.header__button-partner .button-partner__link {
+  border-radius: 40px;
+  width: 225px;
+  height: 40px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #FF4E50;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.container {
+  width: 940px;
+}
+
+@media screen and (max-width: 1200px) {
+  .header__row {
+    padding-left: 38px;
+  }
+  .container {
+    width: 748px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .header {
+    height: 540px;
+  }
+  .header__container {
+    padding-top: 20px;
+  }
+  .header__row {
+    padding-left: 44px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .header__log-in {
+    margin-right: 21px;
+  }
+  .header__logo {
+    margin-top: 100px;
+  }
+  .header__column {
+    margin-top: 29px;
+  }
+  .header__interview {
+    font-size: 30px;
+    line-height: 36px;
+  }
+  .header__text {
+    margin-top: 5px;
+    width: 270px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .header__button-partner {
+    margin-top: 16px;
+  }
+  .header__button-partner .button-partner__link {
+    width: 280px;
+    height: 40px;
+  }
+  .container {
+    width: 300px;
+  }
+}
+
+/*dream share section*/
+.dreamshare {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.dreamshare__container {
+  padding-top: 90px;
+}
+
+.dreamshare__header {
+  margin-bottom: 34px;
+}
+
+.dreamshare__cards-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.dreamshare .card {
+  border-radius: 4px;
+  max-width: 300px;
+  height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 0 25px 21px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.dreamshare .card__step {
+  width: 70px;
+  height: 20px;
+  background: #FF4E50;
+  border-radius: 40px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 22px;
+}
+
+.dreamshare .card__step span {
+  font-family: MontserratThin;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 12px;
+  letter-spacing: 2px;
+  color: #FFFFFF;
+}
+
+.dreamshare .card__header {
+  font-family: Montserrat;
+  font-size: 24px;
+  line-height: 26px;
+  color: #FFFFFF;
+  margin-bottom: 24px;
+}
+
+.dreamshare .card__text {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 14px;
+  color: #E3E3E3;
+}
+
+.dreamshare .first-card {
+  background-image: url(../img/step1.png);
+}
+
+.dreamshare .second-card {
+  background-image: url(../img/step2.png);
+}
+
+.dreamshare .third-card {
+  background-image: url(../img/step3.png);
+}
+
+.container__header {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 32px;
+  text-align: center;
+  color: #444444;
+}
+
+@media screen and (max-width: 1200px) {
+  .dreamshare .card {
+    width: 236px;
+    padding: 0 20px 16px;
+  }
+  .dreamshare__container {
+    padding-top: 94px;
+  }
+  .dreamshare__header {
+    font-size: 22px;
+    line-height: 27px;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .dreamshare__container {
+    padding-top: 34px;
+  }
+  .dreamshare__cards-wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .dreamshare__header {
+    margin-bottom: 15px;
+  }
+  .dreamshare .card {
+    width: 300px;
+    height: 240px;
+    margin-bottom: 10px;
+  }
+  .dreamshare .card__header {
+    margin-bottom: 20px;
+  }
+  .dreamshare .container {
+    width: 300px;
+  }
+}
+
+/*end of dreamshare*/
+/*start od partners*/
+.partner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.partner__container {
+  padding-top: 90px;
+}
+
+.partner__cards-wrap {
+  margin-top: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.partner__cards-wrap .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 221px;
+  height: 224px;
+}
+
+.partner__cards-wrap .card img {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 18px;
+}
+
+.partner__cards-wrap .card__header {
+  font-family: Montserrat;
+  font-size: 14px;
+  line-height: 17px;
+  color: #444444;
+  margin-bottom: 22px;
+}
+
+.partner__cards-wrap .card__text {
+  font-family: Roboto;
+  font-size: 14px;
+  line-height: 14px;
+  color: #666666;
+  text-align: center;
+}
+
+.partner__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 35px;
+}
+
+.partner__link {
+  width: 180px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 2px solid #FF4E50;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 40px;
+  text-decoration: none;
+  font-family: Montserrat;
+  font-size: 14px;
+  line-height: 17px;
+  color: #FF4E50;
+}
+
+@media screen and (max-width: 1200px) {
+  .partner__container {
+    width: 492px;
+    padding-top: 95px;
+  }
+  .partner__header {
+    font-size: 22px;
+    line-height: 27px;
+  }
+  .partner__cards-wrap {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .partner__cards-wrap .card:nth-child(1) {
+    margin-bottom: 35px;
+  }
+  .partner__cards-wrap .card {
+    width: 236px;
+  }
+  .partner__button {
+    margin-top: 21px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .partner__container {
+    padding-top: 26px;
+  }
+  .partner__cards-wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 15px;
+  }
+  .partner__cards-wrap .card:nth-child(1) {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    margin-bottom: -4px;
+  }
+  .partner__cards-wrap .card:nth-child(1)__header {
+    margin-bottom: 22px;
+  }
+  .partner__cards-wrap .card:nth-child(2) {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    margin-bottom: -3px;
+  }
+  .partner__cards-wrap .card:nth-child(3) {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    margin-bottom: 16px;
+  }
+  .partner__cards-wrap .card:nth-child(4) {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+    margin-bottom: -3px;
+  }
+  .partner__link {
+    width: 280px;
+    height: 40px;
+  }
+}
+
+/*end of partners*/
+/*start discover*/
+.discover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.discover__container {
+  padding-top: 90px;
+}
+
+.discover__items-wrap {
+  margin-top: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.discover .item__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.discover .top__cards {
+  border-radius: 4px;
+  width: 300px;
+  height: 310px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 22px;
+  line-height: 27px;
+  color: #FFFFFF;
+}
+
+.discover .top__cards:nth-child(1) {
+  background-image: url(../img/Sport.png);
+}
+
+.discover .top__cards:nth-child(2) {
+  background-image: url(../img/Healath.png);
+}
+
+.discover .top__cards:nth-child(3) {
+  background-image: url(../img/Extreme.png);
+  background-size: cover;
+  text-align: center;
+}
+
+.discover .item__middle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 20px;
+}
+
+.discover .middle__cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: Montserrat;
+  font-size: 22px;
+  line-height: 27px;
+  color: #FFFFFF;
+}
+
+.discover .middle__cards:nth-child(1) {
+  width: 300px;
+  height: 310px;
+  background-image: url(../img/Games.png);
+  border-radius: 4px;
+}
+
+.discover .middle__cards:nth-child(2) {
+  width: 620px;
+  height: 310px;
+  background-image: url(../img/Culture.png);
+  border-radius: 4px;
+}
+
+.discover .item__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 20px;
+}
+
+.discover .bottom__cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: Montserrat;
+  font-size: 22px;
+  line-height: 27px;
+  color: #FFFFFF;
+}
+
+.discover .bottom__cards:nth-child(1) {
+  width: 620px;
+  height: 310px;
+  background-image: url(../img/relax.png);
+  border-radius: 4px;
+}
+
+.discover .bottom__cards:nth-child(2) {
+  width: 300px;
+  height: 310px;
+  background-image: url(../img/mountains.png);
+  border-radius: 4px;
+}
+
+@media screen and (max-width: 1200px) {
+  .discover__header {
+    font-size: 22px;
+  }
+  .discover__items-wrap {
+    width: 748px;
+  }
+  .discover .top__cards {
+    width: 236px;
+    background-position: center;
+  }
+  .discover .middle__cards:nth-child(1) {
+    width: 236px;
+    background-position: center;
+  }
+  .discover .middle__cards:nth-child(2) {
+    width: 492px;
+    background-position: center;
+  }
+  .discover .bottom__cards:nth-child(1) {
+    width: 492px;
+  }
+  .discover .bottom__cards:nth-child(2) {
+    width: 236px;
+    background-size: cover;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .discover .container {
+    width: 300px;
+  }
+  .discover .item__top, .discover .item__middle, .discover .item__bottom {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .discover .top__cards {
+    width: 300px;
+    height: 120px;
+  }
+  .discover .middle__cards:nth-child(1) {
+    width: 300px;
+    height: 120px;
+  }
+  .discover .middle__cards:nth-child(2) {
+    width: 300px;
+    height: 120px;
+  }
+  .discover .bottom__cards:nth-child(1) {
+    width: 300px;
+    height: 120px;
+  }
+  .discover .bottom__cards:nth-child(2) {
+    width: 300px;
+    height: 120px;
+  }
+}
+
+/*end discover*/
+/*# sourceMappingURL=main.css.map */
