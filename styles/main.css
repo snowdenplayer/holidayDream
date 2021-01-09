@@ -1242,6 +1242,7 @@ textarea {
     margin-bottom: 15px;
   }
   .holiday .interests {
+    width: 100%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
